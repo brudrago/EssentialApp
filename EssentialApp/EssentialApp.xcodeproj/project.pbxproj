@@ -20,6 +20,7 @@
 		7B8C5F0A2A5CB2F2003FB278 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C5F092A5CB2F2003FB278 /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		7B8C5F142A5CB2F2003FB278 /* EssentialAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C5F132A5CB2F2003FB278 /* EssentialAppUITests.swift */; };
 		7B8C5F162A5CB2F2003FB278 /* EssentialAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C5F152A5CB2F2003FB278 /* EssentialAppUITestsLaunchTests.swift */; };
+		7BBE8C342A5EE45D008A74D1 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE8C332A5EE45D008A74D1 /* FeedLoaderWithFallbackComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		7B8C5F0F2A5CB2F2003FB278 /* EssentialAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C5F132A5CB2F2003FB278 /* EssentialAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUITests.swift; sourceTree = "<group>"; };
 		7B8C5F152A5CB2F2003FB278 /* EssentialAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BBE8C332A5EE45D008A74D1 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				7B8C5EFB2A5CB2F2003FB278 /* Assets.xcassets */,
 				7B8C5EFD2A5CB2F2003FB278 /* LaunchScreen.storyboard */,
 				7B8C5F002A5CB2F2003FB278 /* Info.plist */,
+				7BBE8C332A5EE45D008A74D1 /* FeedLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				7B8C5EF72A5CB2F0003FB278 /* ViewController.swift in Sources */,
 				7B8C5EF32A5CB2F0003FB278 /* AppDelegate.swift in Sources */,
+				7BBE8C342A5EE45D008A74D1 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				7B8C5EF52A5CB2F0003FB278 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
