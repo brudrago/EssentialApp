@@ -1,6 +1,8 @@
 import XCTest
 import Essential_Feed
 
+@testable import EssentialApp
+
 final class FeedLoaderCacheDecorator: FeedLoader {
     private let decoratee: FeedLoader
     
@@ -56,14 +58,4 @@ final class FeedLoaderCacheDecoratorTests: XCTestCase {
 
         wait(for: [exp], timeout: 1.0)
     }
-    
-    private func uniqueFeed() -> [FeedImage] {
-        return [FeedImage(id: UUID(), description: "any", location: "any", url: URL(string: "http://any-url.com")!)]
-    }
-    
-    private func anyNSError() -> NSError {
-        return NSError(domain: "any error", code: 0)
-    }
-    
-
 }
