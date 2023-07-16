@@ -48,17 +48,4 @@ final class FeedLoaderCacheDecoratorTests: XCTestCase, FeedLoaderTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
-    
-    private class CacheSpy: FeedCache {
-        private (set) var messages = [Message]()
-        
-        enum Message: Equatable {
-            case save([FeedImage])
-        }
-        
-        func save(_ feed: [FeedImage], completion: @escaping (FeedCache.Result) -> Void) {
-            messages.append(.save(feed))
-            completion(.success(()))
-        }
-    }
 }
