@@ -1,41 +1,47 @@
-//
-//  EssentialAppUITests.swift
-//  EssentialAppUITests
-//
-//  Created by bruna.drago on 10/07/23.
-//
-
+import EssentialApp
+import Essential_Feed
 import XCTest
 
-final class EssentialAppUITests: XCTestCase {
+//UITests are super low, should be on separate scheme to be executed only on CI
+//FIX storyboard to this tests work
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+final class EssentialAppAcceptanceUITests: XCTestCase {
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+//    func test_onLaunch_displaysRemoteFeedWhenCustomerHasConnectivity() {
+//        let app = XCUIApplication()
+//        app.launchArguments = ["-reset", "-connectivity", "online"]
+//
+//        app.launch()
+//
+//        let feedCells = app.cells.matching(identifier: "feed-image-cell")
+//        XCTAssertEqual(feedCells.count, 2)
+//
+//        let firstImage = app.images.matching(identifier: "feed-image-view").firstMatch
+//        XCTAssertTrue(firstImage.exists)
+//    }
+    
+//    func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
+//        let onlineApp = XCUIApplication()
+//        onlineApp.launchArguments = ["-reset", "-connectivity", "online"] //reset the state to guarantee theres no shared state between tests
+//        onlineApp.launch()
+//
+//        let offlineApp = XCUIApplication()
+//        offlineApp.launchArguments = ["-connectivity", "offline"]
+//        offlineApp.launch()
+//
+//        let cachedFeedCells = offlineApp.cells.matching(identifier: "feed-image-cell")
+//        XCTAssertEqual(cachedFeedCells.count, 2)
+//
+//        let firstCachedImage = offlineApp.images.matching(identifier: "feed-image-view").firstMatch
+//        XCTAssertTrue(firstCachedImage.exists)
+//    }
+    
+    func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
         let app = XCUIApplication()
+        app.launchArguments = ["-reset", "-connectivity", "offline"]
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+        let feedCells = app.cells.matching(identifier: "feed-image-cell")
+        XCTAssertEqual(feedCells.count, 0)
     }
 }
