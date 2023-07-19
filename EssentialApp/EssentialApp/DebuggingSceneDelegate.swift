@@ -39,7 +39,6 @@ private class DebuggingHTTPClient: HTTPClient {
     }
     
     func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
-        completion(.failure(NSError(domain: "offline", code: 0)))
         switch connectivity {
         case "online":
             completion(.success(makeSuccessfulResponse(for: url)))
