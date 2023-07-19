@@ -45,40 +45,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func makeRemoteClient() -> HTTPClient {
         return URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     }
-
+    
 }
-
-//        let url =  "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed"
-//        let urlString = URL(string: url)!
-//        let session = URLSession(configuration: .ephemeral)
-//        let remoteClient = URLSessionHTTPClient(session: session)
-//        let remoteFeedLoader = RemoteFeedLoader(client: remoteClient, url: urlString)
-//        let remoteImageDataLoader = RemoteFeedImageDataLoader(client: remoteClient)
-//
-//        let localStoreURL = NSPersistentContainer
-//            .defaultDirectoryURL()
-//            .appendingPathComponent("feed-store.sqlite")
-//
-//        let localStore = try! CoreDataFeedStore(storeURL: localStoreURL)
-//        let localFeedLoader = LocalFeedLoader(store: localStore, currentDate: Date.init)
-//        let localImageLoader = LocalFeedImageDataLoader(store: localStore)
-//
-//        window?.rootViewController = FeedUIComposer.feedComposeWith(
-//            feedLoader: FeedLoaderWithFallbackComposite(
-//                primary: FeedLoaderCacheDecorator(decoratee: remoteFeedLoader, cache: localFeedLoader),
-//                fallback: localFeedLoader
-//            ),
-//            imageLoader: FeedImageDataLoaderWithFallbackComposite(
-//                primary: localImageLoader,
-//                fallback: FeedImageDataLoaderCacheDecorator(
-//                    decoratee: remoteImageDataLoader,
-//                    cache: localImageLoader
-//                )
-//            )
-//        )
-
-
-
 
 //To Test if the local loaders are working
 //        window?.rootViewController = FeedUIComposer.feedComposeWith(

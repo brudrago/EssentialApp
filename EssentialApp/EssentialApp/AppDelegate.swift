@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to select a configuration to create the new scene with.
         let configuration = UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
         
-        #if DEBUG
-        configuration.delegateClass = DebuggingSceneDelegate.self
-        #endif
+//        #if DEBUG
+//        configuration.delegateClass = DebuggingSceneDelegate.self
+//        #endif
         
         return configuration
     }
